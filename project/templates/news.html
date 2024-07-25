@@ -1,0 +1,19 @@
+
+{% extends 'flatpages/default.html' %}
+
+{% block title %}
+News
+{% endblock title %}
+
+<!-- В контенте на странице мы выводим все товары -->
+{% block content %}
+   <h1>Все товары</h1>
+   <!-- Выводим товары, только если они есть с помощью тега if -->
+   {% if news %}
+       {{ news }}
+   {% else %}
+       <!-- Если товаров нет, говорим, что товаров нет ;) -->
+       <h2>Товаров нет!</h2>
+   {% endif %}
+{% endblock content %}
+
